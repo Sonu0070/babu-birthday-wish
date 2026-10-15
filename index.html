@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Babu's Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <noscript><style>.intro{display:none!important}</style></noscript>
+<div class="intro" id="intro" role="dialog" aria-label="Birthday surprise">
+  <button class="skip" id="skip" type="button">Skip</button>
+  <div class="garden-glow" aria-hidden="true"></div>
+  <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+  <div class="garden" id="garden" aria-hidden="true">
+    <div class="garden-grass"></div>
+    <div class="garden-flowers" id="garden-flowers"></div>
+  </div>
+  <div class="intro-stage intro-stage--garden">
+    <p class="intro-line l1">Oye Babu...</p>
+    <p class="intro-line l2">Aaj tera din hai.</p>
+    <p class="intro-line l3">Aur mere paas ek chhota sa surprise hai.</p>
+    <div class="bloom-wrap">
+      <button class="btn btn--night" id="bloom" type="button">Phool khila de</button>
+    </div>
+  </div>
+</div>
+<canvas id="garden-petals" aria-hidden="true"></canvas>
+
+<div class="page wrap" id="page">
+  <main>
+    <header class="hero">
+      <div class="balloons" aria-hidden="true">
+        <span class="balloon" style="--c:var(--accent);--d:3.2s;--dl:-.4s;--mt:6px"></span>
+        <span class="balloon" style="--c:var(--sun);--d:2.8s;--dl:-1.2s;--mt:22px"></span>
+        <span class="balloon" style="--c:var(--mint);--d:3.6s;--dl:-.8s"></span>
+        <span class="balloon" style="--c:var(--violet);--d:3s;--dl:-1.8s;--mt:14px"></span>
+        <span class="balloon" style="--c:var(--accent);--d:3.4s;--dl:-.2s;--mt:28px"></span>
+      </div>
+      <p class="eyebrow">Friday, 16 October</p>
+      <h1>Happy Birthday, <span class="mark">Babu!</span></h1>
+      <p class="lede">Ye poori website sirf tere liye bani hai. Scroll kar, humari saari yaadein yahin wait kar rahi hain.</p>
+      <span class="lock">
+        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="8" width="12" height="9" rx="2.5"/><path d="M4.5 8V5.5a3.5 3.5 0 0 1 7 0V8"/></svg>
+        Bestie status: locked
+      </span>
+    </header>
+
+    <section aria-labelledby="h-yaadein">
+      <div class="sec-head">
+        <p class="eyebrow">Humari yaadein</p>
+        <h2 id="h-yaadein">Chhoti chhoti baatein, bade wale memories</h2>
+        <p>Har photo pe tap kar, peeche bhi kuch likha hai.</p>
+      </div>
+      <div class="memories">
+        <button class="polaroid" type="button" aria-pressed="false">
+          <span class="pol-inner">
+            <span class="pol-face pol-front">
+              <span class="pol-art" style="--tint:var(--accent)">
+                <svg viewBox="0 0 64 64" width="84" height="84" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="10" width="26" height="15" rx="3" transform="rotate(35 27 17)"/><path d="M32 29 L50 47"/><path d="M12 55h28"/></svg>
+              </span>
+              <span class="pol-title">Social ke judges</span>
+              <span class="pol-text">Jab hum dono social jaate the, waha joining emote karke baith jaate the aur sabko judge karte the. Lobby humari court thi.</span>
+              <span class="pol-hint">tap karke palat</span>
+            </span>
+            <span class="pol-face pol-back">
+              <span class="pol-hand">Verdict: sab guilty.</span>
+              <span class="pol-hand-sub">Hum dono? Bilkul innocent.</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="polaroid" type="button" aria-pressed="false">
+          <span class="pol-inner">
+            <span class="pol-face pol-front">
+              <span class="pol-art" style="--tint:var(--violet)">
+                <svg viewBox="0 0 64 64" width="84" height="84" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="46" r="7"/><circle cx="50" cy="18" r="9"/><path d="M22 42 C32 40 36 32 42 25" stroke-dasharray="1 9"/></svg>
+              </span>
+              <span class="pol-title">Kassie leke peeche peeche</span>
+              <span class="pol-text">BR khelte time main Kassie lekar tere peeche peeche ghoomti rehti thi. Tu jahan jaye, main wahan.</span>
+              <span class="pol-hint">tap karke palat</span>
+            </span>
+            <span class="pol-face pol-back">
+              <span class="pol-hand">Tu aage, main peeche.</span>
+              <span class="pol-hand-sub">Aur ye kabhi change nahi hoga.</span>
+            </span>
+          </span>
+        </button>
+
+        <button class="polaroid" type="button" aria-pressed="false">
+          <span class="pol-inner">
+            <span class="pol-face pol-front">
+              <span class="pol-art" style="--tint:var(--mint)">
+                <svg viewBox="0 0 64 64" width="84" height="84" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="32" r="14"/><circle cx="40" cy="32" r="14"/></svg>
+              </span>
+              <span class="pol-title">Pehli baar mile the</span>
+              <span class="pol-text">Hum kitne logon se mile the, par kabhi socha nahi tha ki hum dono itne close ban jayenge.</span>
+              <span class="pol-hint">tap karke palat</span>
+            </span>
+            <span class="pol-face pol-back">
+              <span class="pol-hand">Best surprise of the year.</span>
+              <span class="pol-hand-sub">Bhale lobby random thi.</span>
+            </span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-court">
+      <div class="sec-head">
+        <p class="eyebrow">Court is in session</p>
+        <h2 id="h-court">Judge Prithivika ka faisla</h2>
+        <p>Humne lobby mein sabko judge kiya. Aaj teri baari hai.</p>
+      </div>
+      <div class="court">
+        <div>
+          <div class="v-row"><span class="v-label">Dosti level</span><span class="v-val" data-final="Unlimited">Faisla baaki hai</span></div>
+          <div class="v-row"><span class="v-label">Pagalpan</span><span class="v-val" data-final="Guilty, no appeal">Faisla baaki hai</span></div>
+          <div class="v-row"><span class="v-label">Bestie ki post</span><span class="v-val" data-final="Sirf tere naam">Faisla baaki hai</span></div>
+          <div class="v-row"><span class="v-label">Birthday treat</span><span class="v-val" data-final="Pending, yaad rakhna">Faisla baaki hai</span></div>
+        </div>
+        <button class="btn" id="verdict-btn" type="button">Faisla suno</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-rules">
+      <div class="sec-head">
+        <p class="eyebrow">Terms and conditions</p>
+        <h2 id="h-rules">Humari dosti ke rules</h2>
+      </div>
+      <ol class="rules">
+        <li><div><strong>Bestie sirf ek. Aur wo tu hai.</strong><p>Meri aur bhi friends ho sakti hain, par bestie ka naam sirf tera likha hai.</p></div></li>
+        <li><div><strong>Tere matter mein main bohot possessive hoon.</strong><p>Tere alawa mera koi nahi, u know. Isme koi negotiation nahi hai.</p></div></li>
+        <li><div><strong>Judge karna kabhi band nahi hoga.</strong><p>Hum dono saath baithenge, emote karenge aur sabko judge karenge. Hamesha.</p></div></li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="h-letter">
+      <div class="sec-head">
+        <p class="eyebrow">Dil se</p>
+        <h2 id="h-letter">Ek chhoti si chitthi</h2>
+      </div>
+      <div class="letter">
+        <p>Dear Babu,</p>
+        <p>Aaj tera birthday hai aur samajh nahi aa raha kahan se shuru karun. Pehle hum bas ek room mein mile the, aur ab tu meri sabse close insaan hai.</p>
+        <p>Tere saath har game, har baat aur har bakwaas mazedaar lagti hai. Main tere matter mein possessive hoon, ye tu jaanti hai. Kyunki tu meri bestie hai aur tujhe main kisi ke saath share nahi karungi.</p>
+        <p>Aaj ka din tera hai. Khoob hasna, treat lena, aur mujhe mat bhoolna. Love you lots.</p>
+        <p class="sign">Always yours, Prithivika</p>
+      </div>
+    </section>
+
+    <section class="last" aria-labelledby="h-last">
+      <h2 id="h-last">Ek aakhri cheez baaki hai</h2>
+      <p>Ready ho to ye button daba. Phone ka volume kam rakhna, kuch dhamaka hone wala hai.</p>
+      <button class="btn" id="finale-btn" type="button">Aakhri surprise</button>
+    </section>
+
+    <footer>Pyaar se banaya gaya, Prithivika ki taraf se. 16 October 2026.</footer>
+  </main>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<div class="finale" id="finale" hidden role="dialog" aria-label="Happy birthday Babu">
+  <canvas class="fcanvas" id="fcanvas" aria-hidden="true"></canvas>
+  <button class="skip" id="f-close" type="button">Band karo</button>
+  <div class="f-stage">
+    <div class="f-seq" aria-hidden="true">
+      <p>Babu...</p>
+      <p>Tu meri bestie hai.</p>
+      <p>Aur hamesha rahegi.</p>
+    </div>
+    <div class="f-final" id="f-final">
+      <span class="f-hb">Happy Birthday</span>
+      <span class="f-name">Babu!</span>
+      <p class="f-note">Meri bestie, meri sabse khaas insaan. Aaj tera din hai, poora enjoy kar.</p>
+      <p class="f-sign">mahi</p>
+      <div class="f-actions">
+        <button class="btn btn--night" id="f-replay" type="button">Phir se dekho</button>
+        <button class="btn btn--night btn--ghost" id="f-back" type="button">Wapas jao</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
